@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  current_price: 1
+  auction_end: 2019-08-19
+  rsv_price: 1
+  description: MyText
+  title: MyText
+
+two:
+  current_price: 1
+  auction_end: 2019-08-19
+  rsv_price: 1
+  description: MyText
+  title: MyText
