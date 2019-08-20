@@ -1,6 +1,8 @@
-class Api::V1::UsersController < Api::ApplicationController
+class Api::V1::UsersController < ApplicationController
     before_action :authenticate_user!, except: [:create]
 
+
+  
     def current
      render json: current_user
    end

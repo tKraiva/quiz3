@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      get 'user/current'
+      get 'users/current'
     end
   end
 
@@ -22,9 +22,9 @@ Rails.application.routes.draw do
   
     namespace :v1 do
  
-      resources :auctions
+      resources :auction
    
-      resource :session, only: [:create, :destroy]
+      resources :session, only: [:create, :destroy]
 
       resources :users, only: [:create] do
         # api/v1/user/current

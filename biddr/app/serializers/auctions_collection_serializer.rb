@@ -1,4 +1,4 @@
-class AuctionsCollectionSerializerSerializer < ActiveModel::Serializer
+class AuctionsCollectionSerializer < ActiveModel::Serializer
   attributes(
     :id,
     :title,

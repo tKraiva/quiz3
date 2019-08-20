@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-NUM_AUCTIONS = 200
+NUM_AUCTION = 20
 NUM_USERS = 10
 PASSWORD = "supersecret"
 
@@ -37,10 +37,10 @@ users = User.all
 
 
 
-NUM_AUCTIONS.times do
+NUM_AUCTION.times do
   created_at = Faker::Date.between(from: 20.days.ago, to: Date.today)
   later_date = Faker::Date.forward(days:3)
-  q = Auction.create(
+  Auction.create({
     # Faker is a ruby module. We access classes
     # or other modules inside of it with ::.
     # Here, Hacker is a class inside of the
@@ -53,7 +53,7 @@ NUM_AUCTIONS.times do
     created_at: created_at,
     updated_at: created_at,
     user: users.sample
-  )
+  })
   
 end
 
